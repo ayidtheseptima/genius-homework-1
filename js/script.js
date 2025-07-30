@@ -19,21 +19,3 @@ const swiper = new Swiper('.swiper', {
 
 
 
-  const openBtn = document.getElementById('openModalBtn');
-  const closeBtn = document.getElementById('closeModalBtn');
-  const modal = document.getElementById('formModal');
-
-  openBtn.addEventListener('click', () => {
-    modal.classList.remove('hidden');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    modal.classList.add('hidden');
-  });
-
-  // Optional: close modal on background click
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.add('hidden');
-    }
-  });

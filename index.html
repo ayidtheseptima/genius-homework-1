@@ -257,17 +257,22 @@
 								<input
 									type="text"
 									name="name"
+									pattern="^[A-Z][a-z]{1,}\s[A-Z][a-z]{1,}$"
 									placeholder="Ваше ім'я та прізвище"
+									required
 								/>
 								<input
 									type="phone"
 									name="phone"
+									pattern="^\+?[0-9\s\-()]{7,15}$"
 									placeholder="Ваш номер телефону"
+									required
 								/>
 								<input
-									type="mail"
-									name="mail"
+									type="email"
+									name="email"
 									placeholder="Ваша електронна пошта"
+									required
 								/>
 								<input
 									type="submit"

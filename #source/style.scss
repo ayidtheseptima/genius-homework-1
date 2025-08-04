@@ -205,8 +205,6 @@ body {
 	&.active {
 		display: flex;
 	}
-	&__overlay {
-	}
 
 	&__content {
 		color: white;
@@ -740,6 +738,7 @@ body {
 			color: #fff;
 			align-items: center;
 			margin-bottom: 16px;
+			font-style: normal;
 		}
 		div {
 			color: #fff;
@@ -778,7 +777,6 @@ body {
 	}
 
 	&__privacy-text {
-		margin-top: 16px;
 		font-size: 13px;
 		color: $c5;
 	}

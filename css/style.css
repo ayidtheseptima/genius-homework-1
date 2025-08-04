@@ -944,6 +944,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 16px;
+  font-style: normal;
 }
 .footer__contact-info div {
   color: #fff;
@@ -996,7 +997,6 @@ body {
   text-decoration: none;
 }
 .footer__privacy-text {
-  margin-top: 16px;
   font-size: 13px;
   color: #747272;
 }

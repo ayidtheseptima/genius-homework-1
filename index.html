@@ -81,11 +81,10 @@
 							</div>
 							<h1 class="banner__main-title">beauty zone</h1>
 							<div class="banner__order-link">
-								<a href="#how-to-find">
-									<button class="bunner__order-link-button">
-										Замовити дзвінок
-									</button>
-								</a>
+								<button class="bunner__order-link-button" id="openModal">
+									Замовити дзвінок
+								</button>
+
 								<div class="banner__order-link-alt">
 									Запишись та отримай безкоштовну консультацію нашого
 									косметолога
@@ -96,7 +95,7 @@
 					<div class="custom-shape-divider-bottom-1753774549">
 						<svg
 							data-name="Layer 1"
-							xmlns="images/wavesNegative.svg"
+							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 1200 120"
 							preserveAspectRatio="none"
 						>
@@ -107,6 +106,33 @@
 						</svg>
 					</div>
 				</section>
+
+				<!-- Modal -->
+				<div class="modal" id="callbackModal">
+					<div class="modal__overlay"></div>
+					<div class="modal__content">
+						<button class="modal__close" id="closeModal">&times;</button>
+						<h2 class="modal__title">Замовити дзвінок</h2>
+						<div class="modal__text">
+							Запишіться <span>безкоштовно</span> та отримайте подарунок
+						</div>
+						<form action="#" method="post" class="modal__form">
+							<input type="text" placeholder="Ваше ім’я та прізвище" required />
+							<input type="tel" placeholder="Ваш номер телефону" required />
+							<input
+								type="email"
+								placeholder="Ваша електронна пошта"
+								required
+							/>
+							<button type="submit" class="modal__submit-button">
+								Записатись безкоштовно
+							</button>
+						</form>
+						<div class="modal__rules">
+							Натискаючи на кнопку я погоджуюсь з політикою конфіденційності
+						</div>
+					</div>
+				</div>
 
 				<section class="about-us" id="about-us">
 					<div class="container">
@@ -266,7 +292,7 @@
 										required
 									/>
 									<input
-										type="phone"
+										type="tel"
 										name="phone"
 										pattern="^\+?[0-9\s\-()]{7,15}$"
 										placeholder="Ваш номер телефону"
@@ -318,7 +344,7 @@
 								</a>
 							</div>
 
-							<nav class="footer__contact-info-links-wide-screen">
+							<div class="footer__contact-info-links-wide-screen">
 								<a href="tel:+380960000007" class="footer__contact-info-link">
 									<svg
 										width="42"
@@ -361,7 +387,7 @@
 										/>
 									</svg>
 								</a>
-							</nav>
+							</div>
 						</address>
 						<div class="footer__privacy">
 							<a href="#" target="_blank" class="footer__privacy-title">

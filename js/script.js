@@ -54,3 +54,35 @@ links.forEach((link) => {
 		document.body.classList.remove("no-scroll");
 	});
 });
+
+//modal window
+const openBtn = document.getElementById("openModal");
+const closeBtn = document.getElementById("closeModal");
+const modal = document.getElementById("callbackModal");
+const scrollTarget = document.querySelector(".how-to-find"); // selects by class
+
+openBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+
+	if (window.innerWidth <= 768) {
+		// On small screens, scroll to .how-to-find section
+		scrollTarget.scrollIntoView({ behavior: "smooth" });
+	} else {
+		// On larger screens, open modal
+		modal.classList.add("active");
+		document.body.classList.add("no-scroll");
+	}
+});
+
+closeBtn.addEventListener("click", () => {
+	modal.classList.remove("active");
+	document.body.classList.remove("no-scroll");
+});
+
+// Optional: close modal when clicking outside
+modal.addEventListener("click", (e) => {
+	if (e.target === modal) {
+		modal.classList.remove("active");
+		document.body.classList.remove("no-scroll");
+	}
+});

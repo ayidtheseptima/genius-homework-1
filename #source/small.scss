@@ -1,3 +1,10 @@
+@media screen and (max-width: 1319px) {
+	.how-to-find__content {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+}
+
 @media screen and (max-width: 1200px) {
 	.no-scroll {
 		overflow: hidden;

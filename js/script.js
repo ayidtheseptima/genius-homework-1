@@ -31,10 +31,26 @@ const burger = document.getElementById("header__burger");
 const menu = document.querySelector(".header__menu");
 const header = document.querySelector(".header");
 const contactInfo = document.querySelector(".header__contact-info");
+const banner = document.querySelector(".banner");
 
 burger.addEventListener("click", () => {
 	burger.classList.toggle("active");
 	menu.classList.toggle("active");
 	contactInfo.classList.toggle("active");
 	header.classList.toggle("active");
+	banner.classList.toggle("active");
+	document.body.classList.toggle("no-scroll");
+});
+
+const links = document.querySelectorAll(".header__menu a");
+
+links.forEach((link) => {
+	link.addEventListener("click", () => {
+		burger.classList.remove("active");
+		menu.classList.remove("active");
+		contactInfo.classList.remove("active");
+		header.classList.remove("active");
+		banner.classList.remove("active");
+		document.body.classList.remove("no-scroll");
+	});
 });

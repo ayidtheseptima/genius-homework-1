@@ -201,7 +201,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.header__menu a:first-child {
+.header__menu a:hover {
   color: #2b7fff;
   font-weight: 800;
 }

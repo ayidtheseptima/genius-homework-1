@@ -6,6 +6,9 @@ $c3: #4a4a4a;
 $c4: #ffd02b;
 $c5: #747272;
 $c6: #011f4a;
+$white: #fff;
+$modal-window-background: #e4e4e4;
+$black: #000;
 
 html {
 	height: 100%;
@@ -51,7 +54,7 @@ body {
 		left: 0;
 		width: 100%;
 		height: 100vh;
-		background-color: #fff;
+		background-color: $white;
 	}
 	.container {
 		position: relative;
@@ -110,6 +113,7 @@ body {
 		display: none;
 	}
 }
+/*banner section*/
 .banner {
 	position: relative;
 	background: url("../images/banner-background.png") no-repeat;
@@ -130,7 +134,7 @@ body {
 		width: 100%;
 		background: linear-gradient(
 			94deg,
-			#fff 9.65%,
+			$white 9.65%,
 			rgba(255, 255, 255, 0.85) 26.08%,
 			rgba(255, 255, 255, 0.19) 52.74%,
 			rgba(255, 255, 255, 0) 74.46%
@@ -174,7 +178,7 @@ body {
 			width: 219px;
 			height: 53px;
 			background-color: $c2;
-			color: #fff;
+			color: $white;
 			font-weight: 600;
 			font-family: Roboto;
 			font-size: 18px;
@@ -197,7 +201,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #e4e4e4;
+	background: $modal-window-background;
 	display: none;
 	align-items: center;
 	justify-content: center;
@@ -236,7 +240,7 @@ body {
 		border-radius: 1px;
 		width: 25px;
 		height: 2px;
-		background-color: #fff;
+		background-color: $white;
 		transform: rotate(45deg);
 	}
 	&__close::after {
@@ -247,7 +251,7 @@ body {
 		border-radius: 1px;
 		width: 25px;
 		height: 2px;
-		background-color: #fff;
+		background-color: $white;
 		transform: rotate(-45deg);
 	}
 
@@ -282,11 +286,11 @@ body {
 			border: 2px solid $c5;
 			margin: 0 auto 16px auto;
 			background: transparent;
-			color: #fff;
+			color: $white;
 			padding-left: 32px;
 		}
 		input::placeholder {
-			color: #fff;
+			color: $white;
 		}
 	}
 	&__rules {
@@ -308,7 +312,7 @@ body {
 		padding: 0 !important;
 		border: none !important;
 		background-color: $c2 !important;
-		color: #fff;
+		color: $white;
 	}
 }
 
@@ -322,9 +326,9 @@ body {
 }
 .custom-shape-divider-bottom-1753774549 .shape-fill {
 	background: transparent;
-	fill: #fff;
+	fill: $white;
 }
-
+/*.about us section*/
 .about-us {
 	display: flex;
 	.container {
@@ -428,11 +432,11 @@ body {
 }
 
 .custom-shape-divider-bottom-1754053004 .shape-fill {
-	fill: #ffffff;
+	fill: $white;
 }
-
+/*why us section*/
 .why-us {
-	background: linear-gradient(to bottom, #dceaff 0%, #ffffff 100%);
+	background: linear-gradient(to bottom, #dceaff 0%, $white 100%);
 	padding-bottom: 96px;
 	.container {
 		padding: 0 190px;
@@ -460,7 +464,7 @@ body {
 	}
 
 	&__block {
-		background-color: #fff;
+		background-color: $white;
 		width: 316px;
 		height: 181px;
 		border-radius: 32px;
@@ -479,10 +483,10 @@ body {
 		font-size: 18px;
 		line-height: 133%;
 		text-align: center;
-		color: #000;
+		color: $black;
 	}
 }
-
+/*our treatments section*/
 .our-treatments {
 	.container {
 		padding: 0 112px;
@@ -548,7 +552,7 @@ body {
 		font-weight: 400;
 		font-size: 22px;
 		line-height: 26px;
-		color: #fff;
+		color: $white;
 		margin: 372px 77px 32px 115px;
 		text-align: center;
 		z-index: 2;
@@ -571,7 +575,7 @@ body {
 		}
 	}
 }
-
+/*swiper*/
 .swiper {
 	max-width: 1064px;
 	overflow: hidden;
@@ -598,7 +602,7 @@ body {
 .swiper-pagination-bullet-active {
 	background-color: $c2;
 }
-
+/*how to find section*/
 .how-to-find {
 	margin-bottom: 94px;
 	.container {
@@ -643,19 +647,19 @@ body {
 			border: 2px solid $c5;
 			margin: 0 auto 16px auto;
 			background: transparent;
-			color: #fff;
+			color: $white;
 			padding-left: 32px;
 		}
 		input:last-child {
 			margin-bottom: 0;
 		}
 		input::placeholder {
-			color: #fff;
+			color: $white;
 		}
 	}
 
 	&__form-title {
-		color: #fff;
+		color: $white;
 		width: 274px;
 		height: 52px;
 		font-size: 22px;
@@ -671,7 +675,7 @@ body {
 		padding: 0 !important;
 		border: none !important;
 		background-color: $c2 !important;
-		color: #fff;
+		color: $white;
 	}
 	&__rules {
 		text-align: center;
@@ -721,7 +725,7 @@ body {
 			display: flex;
 			text-decoration: none;
 			font-size: 16px;
-			color: #fff;
+			color: $white;
 			align-items: center;
 			margin-bottom: 16px;
 		}
@@ -735,13 +739,13 @@ body {
 			display: flex;
 			text-decoration: none;
 			font-size: 16px;
-			color: #fff;
+			color: $white;
 			align-items: center;
 			margin-bottom: 16px;
 			font-style: normal;
 		}
 		div {
-			color: #fff;
+			color: $white;
 			margin-bottom: 16px;
 		}
 	}
@@ -771,7 +775,7 @@ body {
 		align-content: center;
 	}
 	&__privacy-title {
-		color: #fff;
+		color: $white;
 		margin-bottom: 16px;
 		text-decoration: none;
 	}

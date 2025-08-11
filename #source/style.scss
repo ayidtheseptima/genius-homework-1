@@ -167,11 +167,11 @@ body {
 		font-size: 140px;
 		font-weight: 800;
 		color: $c2;
-		text-transform: uppercase;
+		text-transform: capitalize;
 		text-wrap: wrap;
 		width: 529px;
 		height: 228px;
-		line-height: 114px;
+		line-height: 81%;
 		margin-bottom: 40px;
 	}
 	&__order-link {
@@ -378,7 +378,7 @@ body {
 
 	&__text {
 		font-size: 22px;
-		line-height: 38px;
+		line-height: 173%;
 		margin-bottom: 40px;
 	}
 	&__text:last-child {
@@ -625,7 +625,7 @@ body {
 		height: 52px;
 		font-weight: 400;
 		font-size: 22px;
-		line-height: 26px;
+		line-height: 118%;
 		color: $white;
 		margin: 372px 77px 32px 115px;
 		text-align: center;
@@ -848,7 +848,7 @@ body {
 		height: 42px;
 		font: 800 24px Play;
 		color: $c2;
-		line-height: 21px;
+		line-height: 87%;
 		text-wrap: wrap;
 		text-transform: capitalize;
 	}

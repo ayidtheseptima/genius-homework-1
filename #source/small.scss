@@ -458,6 +458,12 @@
 
 		&__contact-info {
 			display: none;
+			svg {
+				fill: $white;
+				&:hover {
+					fill: $c2;
+				}
+			}
 		}
 
 		&__contact-info-links-wide-screen {
@@ -469,6 +475,9 @@
 			width: 136px;
 			height: 32px;
 			margin: 16px auto 8px auto;
+			svg {
+				fill: $white;
+			}
 		}
 
 		&__privacy-title {

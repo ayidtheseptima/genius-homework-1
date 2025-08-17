@@ -100,8 +100,9 @@ body {
 		justify-content: space-between;
 		align-items: center;
 		width: 160px;
-		svg:hover {
-			path {
+		svg {
+			fill: $c1;
+			&:hover {
 				fill: $white;
 			}
 		}
@@ -500,6 +501,9 @@ body {
 		margin: 0 auto 8px;
 		height: 48px;
 		width: 48px;
+		svg {
+			fill: $c2;
+		}
 	}
 
 	&__text {
@@ -594,7 +598,7 @@ body {
 	}
 
 	&__slide {
-		width: 344px !important;
+		width: 344px;
 		height: 456px;
 		border-radius: 0 120px;
 		display: flex;
@@ -879,8 +883,9 @@ body {
 			align-items: center;
 			margin-bottom: 16px;
 			font-style: normal;
-			svg:hover {
-				path {
+			svg {
+				fill: $white;
+				&:hover {
 					fill: $c2;
 				}
 			}

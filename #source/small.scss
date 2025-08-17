@@ -116,6 +116,9 @@
 			position: absolute;
 			top: 206px;
 			left: 20px;
+			svg:hover {
+				fill: $c2;
+			}
 		}
 	}
 	.banner {

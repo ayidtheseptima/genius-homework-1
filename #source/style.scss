@@ -365,9 +365,11 @@ body {
 	}
 
 	&__title {
+		max-width: 529px;
 		font-family: Play;
 		font-weight: 800;
 		font-size: 64px;
+		line-height: 1.16;
 		color: $c1;
 		margin-bottom: 40px;
 		margin-right: 32px;
@@ -792,8 +794,9 @@ body {
 		width: 274px;
 		height: 52px;
 		font-size: 22px;
+		line-height: 1.18;
 		font-weight: 600;
-		margin: 48px auto 32px auto;
+		margin: 16px auto 32px auto;
 		text-align: center;
 		a {
 			text-decoration: none;

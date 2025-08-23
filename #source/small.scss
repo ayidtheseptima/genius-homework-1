@@ -475,10 +475,17 @@
 		&__contact-info-links-small-screen {
 			display: flex;
 			flex-direction: row;
+			justify-content: space-between;
 			width: 136px;
 			height: 32px;
-			margin: 16px auto 8px auto;
+			margin: 0 auto 8px auto;
+			a {
+				width: 32px;
+				height: 32px;
+			}
 			svg {
+				width: 32px;
+				height: 32px;
 				fill: $white;
 			}
 		}

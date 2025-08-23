@@ -119,10 +119,11 @@ body {
 		display: none;
 	}
 }
+
 /*banner section*/
 .banner {
 	position: relative;
-	background: url("../images/banner-background.png") no-repeat;
+	background: url("../images/banner-background.jpg") no-repeat;
 	background-position: center top;
 	background-attachment: fixed;
 	background-size: cover;
@@ -136,7 +137,7 @@ body {
 		position: absolute;
 		top: 0px;
 		left: 0;
-		height: 133vh;
+		height: 100%;
 		width: 100%;
 		background: linear-gradient(
 			94deg,
@@ -349,6 +350,9 @@ body {
 	overflow: hidden;
 	line-height: 0;
 	z-index: 1;
+	svg {
+		fill: $white;
+	}
 }
 .custom-shape-divider-bottom-1753774549 .shape-fill {
 	background: transparent;
@@ -457,6 +461,7 @@ body {
 	display: block;
 	width: calc(100% + 1.3px);
 	height: 100px;
+	fill: $white;
 }
 
 .custom-shape-divider-bottom-1754053004 .shape-fill {
@@ -597,7 +602,7 @@ body {
 	}
 
 	&__face-masks {
-		background-image: url("../images/our-treatment__face-masks.png");
+		background-image: url("../images/our-treatment__face-masks.jpg");
 	}
 
 	&__slide {
@@ -640,11 +645,11 @@ body {
 	}
 
 	&__face-injections {
-		background-image: url("../images/our-treatment__face-injections.png");
+		background-image: url("../images/our-treatment__face-injections.jpg");
 	}
 
 	&__face-cleaning {
-		background-image: url("../images/our-treatment__face-cleaning.png");
+		background-image: url("../images/our-treatment__face-cleaning.jpg");
 	}
 
 	&__button-next {

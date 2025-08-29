@@ -83,11 +83,39 @@
 							Запишіться <span>безкоштовно</span> та отримайте подарунок
 						</div>
 						<form action="#" method="post" class="modal__form">
-							<input type="text" placeholder="Ваше ім’я та прізвище" required />
-							<input type="tel" placeholder="Ваш номер телефону" required />
+							<label for="user-name" class="visually-hidden"
+								>Ваше ім'я та прізвище</label
+							>
+							<input
+								type="text"
+								id="user-name"
+								name="user-name"
+								pattern="^[A-Z][a-z]{1,}\s[A-Z][a-z]{1,}$"
+								placeholder="Ваше ім'я та прізвище"
+								class="how-to-find__input"
+								required
+							/>
+							<label for="user-name" class="visually-hidden"
+								>Ваш номер телефону</label
+							>
+							<input
+								type="tel"
+								id="user-phone"
+								name="user-phone"
+								pattern="^\+?[0-9\s\-()]{7,15}$"
+								placeholder="Ваш номер телефону"
+								class="how-to-find__input"
+								required
+							/>
+							<label for="user-name" class="visually-hidden"
+								>Ваша електронна пошта</label
+							>
 							<input
 								type="email"
+								id="user-email"
+								name="user-email"
 								placeholder="Ваша електронна пошта"
+								class="how-to-find__input"
 								required
 							/>
 							<button type="submit" class="modal__submit-button">
@@ -250,25 +278,37 @@
 									Запишіться <a href="$">безкоштовно</a> та отримайте подарунок
 								</div>
 								<form action="index.html" method="post">
+									<label for="user-name" class="visually-hidden"
+										>Ваше ім'я та прізвище</label
+									>
 									<input
 										type="text"
-										name="name"
+										id="user-name"
+										name="user-name"
 										pattern="^[A-Z][a-z]{1,}\s[A-Z][a-z]{1,}$"
 										placeholder="Ваше ім'я та прізвище"
 										class="how-to-find__input"
 										required
 									/>
+									<label for="user-phone" class="visually-hidden"
+										>Ваш номер телефону</label
+									>
 									<input
 										type="tel"
-										name="phone"
+										id="user-phone"
+										name="user-phone"
 										pattern="^\+?[0-9\s\-()]{7,15}$"
 										placeholder="Ваш номер телефону"
 										class="how-to-find__input"
 										required
 									/>
+									<label for="user-email" class="visually-hidden"
+										>Ваш номер телефону</label
+									>
 									<input
 										type="email"
-										name="email"
+										id="user-email"
+										name="user-email"
 										placeholder="Ваша електронна пошта"
 										class="how-to-find__input"
 										required

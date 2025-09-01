@@ -52,7 +52,6 @@
 				height: 2px;
 				background-color: #fff;
 				position: relative;
-				transition: all 0.3s ease-in-out;
 				cursor: pointer;
 				border-radius: 1px;
 				&:before {
@@ -64,7 +63,7 @@
 					width: 14px;
 					height: 2px;
 					background-color: #fff;
-					transition: all 0.3s ease-in-out;
+					transition: transform 0.2s ease-in-out, width 0.2s ease-in-out;
 				}
 				&:after {
 					content: "";
@@ -74,7 +73,7 @@
 					width: 10px;
 					height: 2px;
 					background-color: #fff;
-					transition: all 0.3s ease-in-out;
+					transition: transform 0.2s ease-in-out, width 0.2s ease-in-out;
 					border-radius: 1px;
 				}
 			}
@@ -116,6 +115,7 @@
 			position: absolute;
 			top: 206px;
 			left: 20px;
+			transition: fill 0.2s ease-in-out;
 			svg:hover {
 				fill: $c2;
 			}
@@ -390,6 +390,7 @@
 			padding-left: 32px;
 			font-weight: 400;
 			font-size: 13px;
+			transition: background-color 0.2s ease-in-out;
 			&:focus {
 				background-color: $c5;
 			}
@@ -467,6 +468,7 @@
 			display: none;
 			svg {
 				fill: $white;
+				transition: fill 0.2s ease-in-out;
 				&:hover {
 					fill: $c2;
 				}
@@ -486,6 +488,7 @@
 			a {
 				width: 32px;
 				height: 32px;
+
 				&:hover {
 					svg {
 						fill: $c2;
@@ -496,6 +499,7 @@
 				width: 32px;
 				height: 32px;
 				fill: $white;
+				transition: fill 0.2s ease-in-out;
 			}
 		}
 

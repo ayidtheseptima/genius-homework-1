@@ -101,6 +101,7 @@ body {
 			text-decoration: none;
 			color: $c1;
 			align-items: center;
+			transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
 		}
 		& a:hover {
 			color: $c2;
@@ -117,6 +118,7 @@ body {
 		width: 160px;
 		svg {
 			fill: $c1;
+			transition: fill 0.2s ease-in-out;
 			&:hover {
 				fill: $white;
 			}
@@ -209,6 +211,8 @@ body {
 		font-size: 18px;
 		margin-bottom: 14px;
 		border: 2px solid transparent;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+			border 0.2s ease-in-out;
 	}
 	&__order-link-button:hover {
 		background-color: $white;
@@ -349,6 +353,8 @@ body {
 		font-family: Roboto;
 		font-weight: 600;
 		font-size: 18px;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+			border 0.2s ease-in-out;
 	}
 	&__submit-button:hover {
 		background-color: $white;
@@ -434,6 +440,7 @@ body {
 		background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.3205 0L23.5024 15.6641L34.641 27.3205L18.9769 23.5024L7.32051 34.641L11.1386 18.9769L0 7.32051L15.6641 11.1386L27.3205 0Z' fill='%232B7FFF'/%3E%3C/svg%3E");
 		background-size: contain;
 		z-index: 1;
+		animation: clockwise-spin 5s linear 0s infinite;
 	}
 	&__image-left::after {
 		position: absolute;
@@ -445,6 +452,7 @@ body {
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='none' viewBox='0 0 56 56'%3E%3Cpath fill='%23011F4A' d='m11.713 0 18.65 17.822 25.063-6.11-17.822 18.651 6.109 25.063-18.65-17.822L0 43.713l17.822-18.65L11.712 0Z'/%3E%3C/svg%3E");
 		background-size: contain;
 		z-index: 1;
+		animation: clockverse-spin 2s linear 0s infinite;
 	}
 	&__image-right {
 		position: relative;
@@ -461,6 +469,29 @@ body {
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='none' viewBox='0 0 56 56'%3E%3Cpath fill='%23011F4A' d='m11.713 0 18.65 17.822 25.063-6.11-17.822 18.651 6.109 25.063-18.65-17.822L0 43.713l17.822-18.65L11.712 0Z'/%3E%3C/svg%3E");
 		background-size: contain;
 		z-index: 1;
+		animation: clockwise-spin 3s linear 0s infinite;
+	}
+	@keyframes clockwise-spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		66% {
+			transform: rotate(238deg) scale(0.1, 0.1);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes clockverse-spin {
+		0% {
+			transform: rotate(0deg) scale(1, 1);
+		}
+		33% {
+			transform: rotate(-119deg) scale(0.1, 0.1);
+		}
+		100% {
+			transform: rotate(-360deg);
+		}
 	}
 }
 /*2 nd divider*/
@@ -564,6 +595,7 @@ body {
 		width: 44px;
 		border-radius: 100%;
 		border: 1px solid $c1;
+		transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
 		span {
 			content: "";
 			display: block;
@@ -573,6 +605,7 @@ body {
 			width: 17px;
 			height: 2px;
 			background-color: $c1;
+			transition: background-color 0.2s ease-in-out;
 		}
 		span::before {
 			content: "";
@@ -585,6 +618,7 @@ body {
 			height: 11px;
 			background-color: $c1;
 			transform: rotate(-45deg);
+			transition: background-color 0.2s ease-in-out;
 		}
 		span::after {
 			content: "";
@@ -597,6 +631,7 @@ body {
 			height: 11px;
 			background-color: $c1;
 			transform: rotate(45deg);
+			transition: background-color 0.2s ease-in-out;
 		}
 		&:hover {
 			cursor: pointer;
@@ -673,6 +708,7 @@ body {
 		width: 44px;
 		border-radius: 100%;
 		border: 1px solid $c1;
+		transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
 		span {
 			content: "";
 			display: block;
@@ -682,6 +718,7 @@ body {
 			width: 17px;
 			height: 2px;
 			background-color: $c1;
+			transition: background-color 0.2s ease-in-out;
 		}
 		span::before {
 			content: "";
@@ -694,6 +731,7 @@ body {
 			height: 11px;
 			background-color: $c1;
 			transform: rotate(45deg);
+			transition: background-color 0.2s ease-in-out;
 		}
 		span::after {
 			content: "";
@@ -706,6 +744,7 @@ body {
 			height: 11px;
 			background-color: $c1;
 			transform: rotate(-45deg);
+			transition: background-color 0.2s ease-in-out;
 		}
 		&:hover {
 			cursor: pointer;
@@ -834,6 +873,8 @@ body {
 		font-family: Roboto;
 		font-weight: 600;
 		font-size: 18px;
+		transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out,
+			color 0.2s ease-in-out;
 	}
 	&__submit-button:hover {
 		background-color: $white;
@@ -901,6 +942,7 @@ body {
 			color: $white;
 			align-items: center;
 			margin-bottom: 16px;
+			transition: color 0.2s ease-in-out;
 			&:hover {
 				color: $c2;
 			}
@@ -921,6 +963,7 @@ body {
 			font-style: normal;
 			svg {
 				fill: $white;
+				transition: fill 0.2s ease-in-out;
 				&:hover {
 					fill: $c2;
 				}
@@ -960,6 +1003,7 @@ body {
 		color: $white;
 		margin-bottom: 16px;
 		text-decoration: none;
+		transition: color 0.2s ease-in-out;
 		&:hover {
 			color: $c2;
 		}

@@ -90,7 +90,8 @@
 								type="text"
 								id="user-name"
 								name="user-name"
-								pattern="^[A-Z][a-z]{1,}\s[A-Z][a-z]{1,}$"
+								pattern="^[А-Яа-яІіЇїЄєҐґA-Za-z]+ [А-Яа-яІіЇїЄєҐґA-Za-z]+$"
+								title="Введіть імʼя та прізвище (два слова через пробіл)"
 								placeholder="Ваше ім'я та прізвище"
 								class="how-to-find__input"
 								required
@@ -102,7 +103,8 @@
 								type="tel"
 								id="user-phone"
 								name="user-phone"
-								pattern="^\+?[0-9\s\-()]{7,15}$"
+								pattern="^\+380\d{9}$"
+								title="Введіть номер у форматі +380XXXXXXXXX (9 цифр після +380)"
 								placeholder="Ваш номер телефону"
 								class="how-to-find__input"
 								required
@@ -116,6 +118,8 @@
 								name="user-email"
 								placeholder="Ваша електронна пошта"
 								class="how-to-find__input"
+								pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+								title="Введіть коректну адресу електронної пошти"
 								required
 							/>
 							<button type="submit" class="modal__submit-button">
@@ -285,7 +289,8 @@
 										type="text"
 										id="user-name"
 										name="user-name"
-										pattern="^[A-Z][a-z]{1,}\s[A-Z][a-z]{1,}$"
+										pattern="^[А-Яа-яІіЇїЄєҐґA-Za-z]+ [А-Яа-яІіЇїЄєҐґA-Za-z]+$"
+										title="Введіть імʼя та прізвище (два слова через пробіл)"
 										placeholder="Ваше ім'я та прізвище"
 										class="how-to-find__input"
 										required
@@ -297,7 +302,8 @@
 										type="tel"
 										id="user-phone"
 										name="user-phone"
-										pattern="^\+?[0-9\s\-()]{7,15}$"
+										pattern="^\+380\d{9}$"
+										title="Введіть номер у форматі +380XXXXXXXXX (9 цифр після +380)"
 										placeholder="Ваш номер телефону"
 										class="how-to-find__input"
 										required
@@ -311,6 +317,8 @@
 										name="user-email"
 										placeholder="Ваша електронна пошта"
 										class="how-to-find__input"
+										pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+										title="Введіть коректну адресу електронної пошти"
 										required
 									/>
 									<input

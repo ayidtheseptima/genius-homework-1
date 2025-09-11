@@ -1,0 +1,244 @@
+.footer {
+	height: 100%;
+	background-image: url("../images/footer-background-small.png");
+	background-size: cover;
+	@media screen and (min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+		background-image: url("../images/footer-background-small@2x.png");
+	}
+	&::after {
+		content: none;
+		display: none;
+	}
+	.container {
+		max-width: 360px;
+		background: none;
+	}
+	&__content {
+		padding: 32px 0 66px 0;
+		flex-direction: column;
+
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		width: 57px;
+		height: 30px;
+		font-family: Play;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 94%;
+		color: $c2;
+		text-transform: capitalize;
+		margin: 0 auto 42px auto;
+		text-wrap: wrap;
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 16px;
+		a {
+			display: flex;
+			text-decoration: none;
+			font-weight: 400;
+			font-size: 14px;
+			color: $white;
+			align-items: center;
+			margin-bottom: 16px;
+			margin-left: auto;
+			margin-right: auto;
+			transition: color 0.2s ease-in-out;
+			&:hover {
+				color: $c2;
+			}
+		}
+		a:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__contact-info {
+		display: none;
+	}
+
+	&__contact-info-links-wide-screen {
+		display: none;
+	}
+	&__contact-info-links-small-screen {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 136px;
+		height: 32px;
+		margin: 0 auto 8px auto;
+		a {
+			width: 32px;
+			height: 32px;
+
+			&:hover {
+				svg {
+					fill: $c2;
+				}
+			}
+		}
+		svg {
+			width: 32px;
+			height: 32px;
+			fill: $white;
+			transition: fill 0.2s ease-in-out;
+		}
+	}
+	&__contact-info-link {
+		height: 42px;
+		width: 42px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__privacy {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		align-content: center;
+	}
+	&__privacy-title {
+		color: $white;
+		margin-bottom: 16px;
+		text-decoration: none;
+		text-align: center;
+		font-weight: 400;
+		font-size: 14px;
+		transition: color 0.2s ease-in-out;
+		&:hover {
+			color: $c2;
+		}
+	}
+
+	&__privacy-text {
+		font-size: 13px;
+		color: $c5;
+		text-align: center;
+		margin-top: 8px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.footer {
+		position: relative;
+		height: 278px;
+		background: url("../images/footer-background.png");
+		@media screen and (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background: url("../images/footer-background@2x.png");
+			background-size: cover;
+		}
+		&::after {
+			display: block;
+			content: "";
+			width: 247px;
+			height: 152px;
+			background: url("../images/footer__container-background.png");
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			@media screen and (min-device-pixel-ratio: 2),
+				(min-resolution: 192dpi),
+				(min-resolution: 2dppx) {
+				background: url("../images/footer__container-background@2x.png");
+				background-size: cover;
+			}
+		}
+
+		.container {
+			max-width: 1240px;
+			width: 100%;
+			height: 100%;
+			background-position: right -31px bottom -61px;
+			background-size: 278px 213px;
+		}
+		&__content {
+			padding: 56px 0;
+			flex-direction: row;
+		}
+		&__logo {
+			width: 83px;
+			height: 42px;
+			font: 800 24px Play;
+			line-height: 87%;
+			margin: 0;
+		}
+
+		&__menu {
+			display: flex;
+			flex-direction: column;
+
+			a {
+				font-size: 16px;
+				margin-left: 0;
+			}
+		}
+
+		&__contact-info {
+			a {
+				display: flex;
+				text-decoration: none;
+				font-size: 16px;
+				color: $white;
+				align-items: center;
+				margin-bottom: 16px;
+				font-style: normal;
+				svg {
+					fill: $white;
+					transition: fill 0.2s ease-in-out;
+					&:hover {
+						fill: $c2;
+					}
+				}
+			}
+			div {
+				max-width: 200px;
+				color: $white;
+				a {
+					transition: color 0.2s ease-in-out;
+					&:hover {
+						color: $c2;
+					}
+				}
+			}
+		}
+
+		&__contact-info-links-wide-screen {
+			display: flex;
+			justify-content: space-between;
+			height: 42px;
+			width: 174px;
+		}
+		&__contact-info-links-small-screen {
+			display: none;
+		}
+		&__contact-info {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__privacy {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			align-content: center;
+		}
+		&__privacy-title {
+			font-size: 16px;
+		}
+		&__privacy-text {
+			margin-top: 0;
+		}
+	}
+}

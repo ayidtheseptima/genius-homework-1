@@ -1,0 +1,369 @@
+.our-treatments {
+	.container {
+		padding: 0 20px;
+	}
+	&__title {
+		font-family: Play;
+		font-weight: 600;
+		font-size: 32px;
+		text-align: center;
+		margin-bottom: 24px;
+		a {
+			text-decoration: none;
+			color: $c2;
+			align-items: center;
+			margin-bottom: 16px;
+		}
+	}
+	&__slider {
+		max-width: 320px;
+		margin: 24px auto 16px auto;
+
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__button-prev {
+		display: none;
+	}
+	&__slide {
+		width: 320px;
+		height: 416px;
+		border-radius: 0 120px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		position: relative;
+	}
+	&__slide::before {
+		content: "";
+		position: absolute;
+		border-radius: 0 120px;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			180deg,
+			rgba(1, 28, 68, 0) 47.4%,
+			rgba(1, 28, 68, 0.73) 82.66%,
+			#011c44 99.06%
+		);
+		z-index: 1;
+	}
+	&__face-masks {
+		background-image: url("../images/our-treatment__face-masks.jpg");
+		@media screen and (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url("../images/our-treatment__face-masks@2x.jpg");
+			background-size: cover;
+		}
+	}
+	&__face-injections {
+		background-image: url("../images/our-treatment__face-injections.jpg");
+		@media screen and (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url("../images/our-treatment__face-injections@2x.jpg");
+			background-size: cover;
+		}
+	}
+
+	&__face-cleaning {
+		background-image: url("../images/our-treatment__face-cleaning.jpg");
+		@media screen and (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: url("../images/our-treatment__face-cleaning@2x.jpg");
+			background-size: cover;
+		}
+	}
+
+	&__slide-text {
+		position: relative;
+		width: 152px;
+		height: 52px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 118%;
+		text-align: center;
+		color: $white;
+		margin: 372px 77px 32px 115px;
+		z-index: 2;
+	}
+	&__button-next {
+		display: none;
+	}
+}
+.swiper {
+	max-width: 320px;
+}
+
+.swiper-pagination {
+	margin-top: 16px;
+	margin-bottom: 40px;
+}
+.swiper-pagination-bullet {
+	width: 8px;
+	height: 8px;
+	margin-right: 16px;
+}
+.swiper-pagination-bullet:last-child {
+	margin-right: 0;
+}
+
+.swiper {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+.swiper-wrapper {
+	display: flex;
+}
+.swiper-slide {
+	width: auto;
+	flex-shrink: 0;
+}
+
+.swiper {
+	max-width: 1064px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.swiper-pagination {
+	display: block;
+	position: relative;
+	margin-top: 32px;
+	text-align: center;
+	z-index: 10;
+}
+.swiper-pagination-bullet {
+	margin-right: 24px;
+	height: 12px;
+	width: 12px;
+	background-color: $c5;
+}
+.swiper-pagination-bullet:last-child {
+	margin-right: 0;
+}
+.swiper-pagination-bullet-active {
+	background-color: $c2;
+}
+@media screen and (min-width: 768px) {
+	.our-treatments {
+		&__slider {
+			max-width: 1216px;
+			margin: 0 auto;
+
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	.swiper {
+		max-width: 656px;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.swiper-pagination {
+		display: block;
+		position: relative;
+		margin-top: 32px;
+		text-align: center;
+		z-index: 10;
+	}
+	.swiper-pagination-bullet {
+		margin-right: 24px;
+		height: 12px;
+		width: 12px;
+		background-color: $c5;
+	}
+	.swiper-pagination-bullet:last-child {
+		margin-right: 0;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: $c2;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.our-treatments {
+		.container {
+			max-width: 1216px;
+		}
+		&__title {
+			font-weight: 800;
+			font-size: 64px;
+			margin-bottom: 48px;
+		}
+		&__slider {
+			max-width: 1216px;
+			margin: 0 auto;
+		}
+		&__button-prev {
+			display: flex;
+			position: relative;
+			margin: auto 0 auto 0;
+			height: 44px;
+			width: 44px;
+			border-radius: 100%;
+			border: 1px solid $c1;
+			transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+			span {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 21px;
+				left: 14px;
+				width: 17px;
+				height: 2px;
+				background-color: $c1;
+				transition: background-color 0.2s ease-in-out;
+			}
+			span::before {
+				content: "";
+				display: block;
+				position: absolute;
+				border-radius: 1px;
+				top: -1px;
+				left: 1px;
+				width: 2px;
+				height: 11px;
+				background-color: $c1;
+				transform: rotate(-45deg);
+				transition: background-color 0.2s ease-in-out;
+			}
+			span::after {
+				content: "";
+				display: block;
+				position: absolute;
+				border-radius: 1px;
+				top: -8px;
+				left: 1px;
+				width: 2px;
+				height: 11px;
+				background-color: $c1;
+				transform: rotate(45deg);
+				transition: background-color 0.2s ease-in-out;
+			}
+			&:hover {
+				cursor: pointer;
+				background-color: $c2;
+				border: 1px solid $white;
+				span {
+					background-color: $white;
+				}
+				span::before {
+					background-color: $white;
+				}
+				span::after {
+					background-color: $white;
+				}
+			}
+		}
+
+		&__slide {
+			width: 344px;
+			height: 456px;
+		}
+
+		&__slide-text {
+			font-size: 22px;
+			line-height: 118%;
+		}
+
+		&__button-next {
+			display: flex;
+			position: relative;
+			margin: auto 0 auto 0;
+			height: 44px;
+			width: 44px;
+			border-radius: 100%;
+			border: 1px solid $c1;
+			transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+			span {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 21px;
+				left: 13px;
+				width: 17px;
+				height: 2px;
+				background-color: $c1;
+				transition: background-color 0.2s ease-in-out;
+			}
+			span::before {
+				content: "";
+				display: block;
+				position: absolute;
+				border-radius: 1px;
+				top: -1px;
+				left: 13px;
+				width: 2px;
+				height: 11px;
+				background-color: $c1;
+				transform: rotate(45deg);
+				transition: background-color 0.2s ease-in-out;
+			}
+			span::after {
+				content: "";
+				display: block;
+				position: absolute;
+				border-radius: 1px;
+				top: -8px;
+				left: 13px;
+				width: 2px;
+				height: 11px;
+				background-color: $c1;
+				transform: rotate(-45deg);
+				transition: background-color 0.2s ease-in-out;
+			}
+			&:hover {
+				cursor: pointer;
+				background-color: $c2;
+				border: 1px solid $white;
+				span {
+					background-color: $white;
+				}
+				span::before {
+					background-color: $white;
+				}
+				span::after {
+					background-color: $white;
+				}
+			}
+		}
+	}
+	/*swiper*/
+	.swiper {
+		max-width: 1064px;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.swiper-pagination {
+		display: block;
+		position: relative;
+		margin-top: 32px;
+		text-align: center;
+		z-index: 10;
+	}
+	.swiper-pagination-bullet {
+		margin-right: 24px;
+		height: 12px;
+		width: 12px;
+		background-color: $c5;
+	}
+	.swiper-pagination-bullet:last-child {
+		margin-right: 0;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: $c2;
+	}
+}

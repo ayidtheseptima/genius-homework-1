@@ -1,0 +1,186 @@
+.about-us {
+	display: flex;
+	.container {
+		max-width: 360px;
+		padding: 0 20px;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		overflow: visible;
+	}
+	&__info {
+		max-width: 320px;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	&__info::after {
+		position: absolute;
+		right: 22px;
+		bottom: -12px;
+		content: "";
+		height: 40px;
+		width: 40px;
+		background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2235%22%20height%3D%2235%22%20viewBox%3D%220%200%2035%2035%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M7.32051%200L18.9769%2011.1386L34.641%207.32051L23.5024%2018.9769L27.3205%2034.641L15.6641%2023.5024L0%2027.3205L11.1386%2015.6641L7.32051%200Z%22%20fill%3D%22%23011F4A%22/%3E%3C/svg%3E");
+		background-size: contain;
+		z-index: 1;
+	}
+
+	&__title {
+		max-width: 264px;
+		font-family: Roboto;
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 1.19;
+		color: $c1;
+		margin-bottom: 24px;
+
+		a {
+			color: $c2;
+			text-transform: capitalize;
+		}
+	}
+
+	&__text {
+		position: relative;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: auto;
+		letter-spacing: 0;
+		margin-bottom: 16px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__name {
+		text-transform: capitalize;
+		font-weight: 700;
+	}
+
+	&__images {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.about-us {
+		.container {
+			width: 100%;
+			max-width: 1240px;
+			padding: 0;
+			justify-content: space-between;
+		}
+		&__info {
+			max-width: 710px;
+			width: 100%;
+			&::after {
+				content: none;
+				display: none;
+			}
+		}
+
+		&__title {
+			max-width: 529px;
+			font-weight: 800;
+			font-size: 64px;
+			line-height: 1.16;
+			margin-bottom: 40px;
+
+			a {
+				font-family: Play;
+			}
+		}
+
+		&__text {
+			font-size: 22px;
+			line-height: 173%;
+			margin-bottom: 40px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&__name {
+			font-weight: 600;
+		}
+
+		&__images {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			max-width: 500px;
+			img {
+				border-radius: 100%;
+				width: 327px;
+				height: 327px;
+			}
+		}
+		&__image-left {
+			position: relative;
+			width: 100%;
+			margin-bottom: 40px;
+		}
+		&__image-left::before {
+			position: absolute;
+			left: 471px;
+			top: 32px;
+			content: "";
+			height: 40px;
+			width: 40px;
+			background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.3205 0L23.5024 15.6641L34.641 27.3205L18.9769 23.5024L7.32051 34.641L11.1386 18.9769L0 7.32051L15.6641 11.1386L27.3205 0Z' fill='%232B7FFF'/%3E%3C/svg%3E");
+			background-size: contain;
+			z-index: 1;
+			animation: clockwise-spin 5s linear 0s infinite;
+		}
+		&__image-left::after {
+			position: absolute;
+			left: 472px;
+			top: 270px;
+			content: "";
+			height: 16px;
+			width: 16px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='none' viewBox='0 0 56 56'%3E%3Cpath fill='%23011F4A' d='m11.713 0 18.65 17.822 25.063-6.11-17.822 18.651 6.109 25.063-18.65-17.822L0 43.713l17.822-18.65L11.712 0Z'/%3E%3C/svg%3E");
+			background-size: contain;
+			z-index: 1;
+			animation: clockverse-spin 2s linear 0s infinite;
+		}
+		&__image-right {
+			position: relative;
+			width: 100%;
+			text-align: right;
+		}
+		&__image-right::before {
+			position: absolute;
+			left: 117px;
+			top: 0px;
+			content: "";
+			height: 64px;
+			width: 64px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='none' viewBox='0 0 56 56'%3E%3Cpath fill='%23011F4A' d='m11.713 0 18.65 17.822 25.063-6.11-17.822 18.651 6.109 25.063-18.65-17.822L0 43.713l17.822-18.65L11.712 0Z'/%3E%3C/svg%3E");
+			background-size: contain;
+			z-index: 1;
+			animation: clockwise-spin 3s linear 0s infinite;
+		}
+		@keyframes clockwise-spin {
+			0% {
+				transform: rotate(0deg);
+			}
+			66% {
+				transform: rotate(238deg) scale(0.1, 0.1);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes clockverse-spin {
+			0% {
+				transform: rotate(0deg) scale(1, 1);
+			}
+			33% {
+				transform: rotate(-119deg) scale(0.1, 0.1);
+			}
+			100% {
+				transform: rotate(-360deg);
+			}
+		}
+	}
+}

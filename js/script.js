@@ -19,6 +19,10 @@ const swiper = new Swiper(".swiper", {
 			slidesPerView: 1,
 			spaceBetween: 10,
 		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 16,
+		},
 
 		1200: {
 			slidesPerView: 3,
@@ -64,7 +68,7 @@ const scrollTarget = document.querySelector(".how-to-find"); // selects by class
 openBtn.addEventListener("click", (e) => {
 	e.preventDefault();
 
-	if (window.innerWidth <= 768) {
+	if (window.innerWidth <= 1200) {
 		// On small screens, scroll to .how-to-find section
 		scrollTarget.scrollIntoView({ behavior: "smooth" });
 	} else {

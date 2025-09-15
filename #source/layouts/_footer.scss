@@ -163,7 +163,7 @@
 			background-size: 278px 213px;
 		}
 		&__content {
-			padding: 56px 0;
+			padding: 56px 20px;
 			flex-direction: row;
 		}
 		&__logo {
@@ -239,6 +239,13 @@
 		}
 		&__privacy-text {
 			margin-top: 0;
+		}
+	}
+}
+@media screen and (min-width: 1440px) {
+	.footer {
+		&__content {
+			padding: 56px 0;
 		}
 	}
 }

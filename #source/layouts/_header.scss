@@ -151,6 +151,43 @@
 		}
 	}
 }
+@media screen and (min-width: 1200px) {
+	.header {
+		&__logo {
+			width: 74px;
+			height: 42px;
+			font-weight: 800;
+			line-height: 95%;
+			font-size: 22px;
+		}
+		&__menu {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			max-width: 525px;
+			z-index: 3;
+		}
+		&__contact-info {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 160px;
+			svg {
+				fill: $c1;
+				transition: fill 0.2s ease-in-out;
+				&:hover {
+					fill: $white;
+				}
+			}
+		}
+		&__contact-info-link {
+			display: flex;
+		}
+		&__burger {
+			display: none;
+		}
+	}
+}
 
 @media screen and (min-width: 1200px) {
 	.header {
@@ -169,7 +206,7 @@
 			background-color: $white;
 		}
 		.container {
-			padding: 32px 0px;
+			padding: 32px 10px;
 		}
 		&__logo {
 			width: 74px;
@@ -203,6 +240,13 @@
 		}
 		&__burger {
 			display: none;
+		}
+	}
+}
+@media screen and (min-width: 1260px) {
+	.header {
+		.container {
+			padding: 32px 0px;
 		}
 	}
 }

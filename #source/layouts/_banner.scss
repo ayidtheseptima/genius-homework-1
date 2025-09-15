@@ -1,161 +1,243 @@
 /*banner section*/
 .banner {
 	position: relative;
-	background: url("../images/banner-background.jpg") no-repeat;
-	background-position: center top;
-	background-attachment: fixed;
+
+	padding-bottom: 80px;
 	background-size: cover;
 	min-height: 100vh;
+
 	padding-top: 106px;
 	display: flex;
 	flex-direction: column;
-	@media screen and (min-device-pixel-ratio: 2),
-		(min-resolution: 192dpi),
-		(min-resolution: 2dppx) {
-		background: url("../images/banner-background@2x.jpg") no-repeat;
-		background-size: cover;
+	&__background {
+		display: none;
 	}
-	&::after {
-		content: "";
+	&__background-small {
 		position: absolute;
-		top: 0px;
-		left: 0;
-		height: 100%;
+		inset: 0;
 		width: 100%;
-		background: linear-gradient(
-			94deg,
-			$white 9.65%,
-			rgba(255, 255, 255, 0.85) 26.08%,
-			rgba(255, 255, 255, 0.19) 52.74%,
-			rgba(255, 255, 255, 0) 74.46%
-		);
+		height: 100%;
+		object-fit: cover;
+		object-position: right bottom;
 		z-index: 0;
 	}
 	.container {
 		width: 100%;
 		flex: 1 1 auto;
 		z-index: 1;
+		position: relative;
+		z-index: 1;
+	}
+	&.active {
+		visibility: hidden;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0px;
+		left: 0;
+		min-height: 400px;
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(
+			38deg,
+			#fff 0%,
+			rgba(255, 255, 255, 0.78) 31.23%,
+			rgba(255, 255, 255, 0.2) 50.39%,
+			rgba(255, 255, 255, 0) 68.37%
+		);
 	}
 	&__text {
 		display: flex;
 		flex-direction: column;
-		margin-top: 16px;
-		margin-left: 106px;
+		align-items: center;
+		margin: 0;
+		text-align: center;
+		margin-top: 25px;
 	}
 	&__type-of-establishment {
 		$color: $c1;
-		margin-bottom: 16px;
+
+		width: 133px;
+		height: 18px;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 150%;
+		margin-bottom: 0;
 	}
 	&__main-title {
 		font-family: Play;
-		font-size: 140px;
-		font-weight: 800;
 		color: $c2;
+		width: 330px;
+		height: 46px;
+		text-align: center;
+		font-weight: 700;
+		font-size: 54px;
+		line-height: 85%;
 		text-transform: capitalize;
-		text-wrap: wrap;
-		width: 529px;
-		height: 228px;
-		line-height: 81%;
-		margin-bottom: 40px;
+		text-align: center;
+		text-wrap: nowrap;
+		margin: 0 auto 32px auto;
 	}
 	&__order-link {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		width: 238px;
 		height: 103px;
 	}
 	&__order-link-button {
+		width: 186px;
+		height: 44px;
+		font-weight: 600;
+		font-size: 16px;
+		margin-bottom: 8px;
 		display: flex;
 		padding: 0;
 		justify-content: center;
 		align-items: center;
 		border-radius: 32px;
-		width: 219px;
-		height: 53px;
 		background-color: $c2;
 		color: $white;
-		font-weight: 600;
 		font-family: Roboto;
-		font-size: 18px;
-		margin-bottom: 14px;
 		border: 2px solid transparent;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
 			border 0.2s ease-in-out;
-	}
-	&__order-link-button:hover {
-		background-color: $white;
-		color: $c1;
-		border: 2px solid $c2;
+		&:hover {
+			background-color: $white;
+			color: $c1;
+			border: 2px solid $c2;
+		}
 	}
 	&__order-link-alt {
-		width: 238px;
+		width: 186px;
 		height: 36px;
-		font-size: 12px;
-		line-height: 150%;
+		font-weight: 400;
+		font-size: 11px;
+		line-height: 164%;
 		text-align: center;
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
 	.banner {
-		&.active {
-			visibility: hidden;
+		&__background {
+			display: block;
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: right bottom; /* anchor bottom */
+			z-index: 0;
+		}
+		&__background-small {
+			display: none;
 		}
 		&::after {
-			min-height: 400px;
 			background: linear-gradient(
-				38deg,
-				#fff 0%,
-				rgba(255, 255, 255, 0.78) 31.23%,
-				rgba(255, 255, 255, 0.2) 50.39%,
-				rgba(255, 255, 255, 0) 68.37%
+				94deg,
+				$white 9.65%,
+				rgba(255, 255, 255, 0.85) 26.08%,
+				rgba(255, 255, 255, 0.19) 52.74%,
+				rgba(255, 255, 255, 0) 74.46%
 			);
+			z-index: 0;
 		}
+
 		&__text {
+			align-items: flex-start;
 			display: flex;
 			flex-direction: column;
-			align-items: center;
-			margin: 0;
-			text-align: center;
-			margin-top: 25px;
+			margin-top: 16px;
+			margin-left: 106px;
+			margin-bottom: 88px;
 		}
 		&__type-of-establishment {
-			width: 133px;
-			height: 18px;
-			font-weight: 400;
-			font-size: 12px;
-			line-height: 150%;
-			margin-bottom: 0;
+			margin-bottom: 16px;
 		}
 		&__main-title {
-			width: 330px;
-			height: 46px;
-			text-align: center;
-			font-weight: 700;
-			font-size: 54px;
-			line-height: 85%;
-			text-transform: capitalize;
-			text-align: center;
-			text-wrap: nowrap;
-			margin: 0 auto 32px auto;
+			margin-left: 0;
+			text-align: left;
+			font-size: 140px;
+			font-weight: 800;
+			text-wrap: wrap;
+			width: 529px;
+			height: 228px;
+			line-height: 81%;
+			margin-bottom: 40px;
 		}
 		&__order-link {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+			width: 238px;
+			height: 103px;
 		}
 		&__order-link-button {
-			width: 186px;
-			height: 44px;
-			font-weight: 600;
-			font-size: 16px;
-			margin-bottom: 8px;
+			width: 219px;
+			height: 53px;
+			font-size: 18px;
+			margin-bottom: 14px;
 		}
+
 		&__order-link-alt {
-			width: 186px;
+			width: 238px;
 			height: 36px;
-			font-weight: 400;
-			font-size: 11px;
-			line-height: 164%;
-			text-align: center;
+			font-size: 12px;
+			line-height: 150%;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.banner {
+		&::after {
+			background: linear-gradient(
+				94deg,
+				$white 9.65%,
+				rgba(255, 255, 255, 0.85) 26.08%,
+				rgba(255, 255, 255, 0.19) 52.74%,
+				rgba(255, 255, 255, 0) 74.46%
+			);
+			z-index: 0;
+		}
+
+		&__text {
+			align-items: flex-start;
+			display: flex;
+			flex-direction: column;
+			margin-top: 16px;
+			margin-left: 106px;
+			margin-bottom: 88px;
+		}
+		&__type-of-establishment {
+			margin-bottom: 16px;
+		}
+		&__main-title {
+			margin-left: 0;
+			text-align: left;
+			font-size: 140px;
+			font-weight: 800;
+			text-wrap: wrap;
+			width: 529px;
+			height: 228px;
+			line-height: 81%;
+			margin-bottom: 40px;
+		}
+		&__order-link {
+			width: 238px;
+			height: 103px;
+		}
+		&__order-link-button {
+			width: 219px;
+			height: 53px;
+			font-size: 18px;
+			margin-bottom: 14px;
+		}
+
+		&__order-link-alt {
+			width: 238px;
+			height: 36px;
+			font-size: 12px;
+			line-height: 150%;
 		}
 	}
 }

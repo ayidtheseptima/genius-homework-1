@@ -68,6 +68,7 @@
 			max-width: 1240px;
 			padding: 0;
 			justify-content: space-between;
+			padding: 0 20px;
 		}
 		&__info {
 			max-width: 710px;
@@ -181,6 +182,13 @@
 			100% {
 				transform: rotate(-360deg);
 			}
+		}
+	}
+}
+@media screen and (min-width: 1300px) {
+	.about-us {
+		.container {
+			padding: 0;
 		}
 	}
 }

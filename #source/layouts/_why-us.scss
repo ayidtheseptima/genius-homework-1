@@ -105,6 +105,9 @@
 		&__block {
 			height: 181px;
 		}
+		&__block:last-child {
+			margin-bottom: 16px;
+		}
 
 		&__logo {
 			text-align: center;
